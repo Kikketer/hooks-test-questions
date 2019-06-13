@@ -34,7 +34,7 @@ describe('ExampleContainer', () => {
   test('when a child does something expect the prop function to have `whoa`', () => {
     const onSomething = jest.fn()
     act(() => {
-      renderer.create(<ExampleContainer onSomething={onSomething} />)
+      renderer.create(<ExampleContainer onSomething={onSomething} iHaveMounted={() => {}} />)
     })
     // Somehow trigger the child's action... not sure how
     // Urm....
